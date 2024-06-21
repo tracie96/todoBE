@@ -2,8 +2,22 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const todoRoutes = require('./routes/todoRoutes');
+const cors = require('cors')
 
 const app = express();
+
+const corsConfig = {};
+
+  Object.assign(corsConfig, {
+    origin: [
+      "*",
+    ],
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    credentials: true,
+  });
+
+app.use(cors(corsConfig));
+
 app.use(bodyParser.json());
 app.use('/api', todoRoutes);
 
