@@ -27,7 +27,7 @@ app.get("/", (req, res) => res.status(200).send("Welcome to My todo"));
 app.use(bodyParser.json({ limit: "10mb" }));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const port = 3001;
+const port = 8080;
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
