@@ -10,7 +10,7 @@ const corsConfig = {};
 
   Object.assign(corsConfig, {
     origin: [
-      "https://todofe-p4u8.onrender.com/"
+      "https://todofe-p4u8.onrender.com"
     ],
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true,
